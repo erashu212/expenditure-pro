@@ -1,0 +1,39 @@
+<expense-modal on-save="vm.onSave(data)" button-text="Add Category" button-class="btn-danger" template-url="directive-templates/category-modal.html"></expense-modal>
+<div class="row">
+	&nbsp;
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="table-responsive">
+			<table class="table table-bordered table-stripped">
+				<thead>
+					<tr>
+						<th>
+							Category
+						</th>
+						<th>
+							Action
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="data in vm.Categories">
+						<td>
+							{{data.Title}}
+						</td>
+						<td>
+							<a href="javascript:void(0)" ng-click="vm.onEdit(data);" class="btn btn-sm btn-primary">
+								<i class="fa fa-edit"></i>
+							</a>
+							<a href="javascript:void(0)" ng-click="vm.onDelete(data);" class="btn btn-sm btn-danger">
+								<i class="fa fa-trash"></i>
+							</a>
+						</td>
+					</tr>
+					<tr ng-if="vm.Categories.length <= 0">
+						<td colspan="2" style="text-align:center">No records found!</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>

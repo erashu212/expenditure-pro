@@ -1,0 +1,16 @@
+<expense-modal on-save="vm.onSaveExpense(data)" button-text="Add Expense" button-class="btn-danger" template-url="directive-templates/expense-modal.html"></expense-modal>
+<div class="row">
+	<div class="col-md-8">
+		<nvd3 options="vm.options"
+		data="vm.Expenses"></nvd3>
+	</div>
+	<div class="col-md-4">
+		<div class="row" ng-repeat="expense in vm.Expenses track by $index | orderBy:'Id'">
+			<div class="well">
+				<a href="javascript:void(0)" ng-click="vm.onDelete(expense);" class="btn btn-danger btn-sm pull-rights"><i class="fa fa-trash"></i></a>
+				<br />
+				Spent <b>{{expense.Amount}}</b> for <b>{{expense.Title}}</b> in <b>{{expense.Categories | concat}}</b> from Salary with Cash payment
+			</div>
+		</div>
+	</div>
+</div>

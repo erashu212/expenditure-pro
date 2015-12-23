@@ -1,0 +1,25 @@
+{
+  "name": "expense-manager",
+  "description": "Easy to manage",
+  "main": "index.js",
+  "authors": [
+    "Ashutosh Singh"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "expense"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-nvd3": "~1.0.5"
+  }
+}

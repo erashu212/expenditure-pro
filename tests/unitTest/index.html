@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocha Spec Runner</title>
+    <link rel="stylesheet" href="../../../../node_modules/mocha/mocha.css">
+</head>
+<body>
+    <div id="mocha"></div>
+    <script src="../../../../node_modules/mocha/mocha.js"></script>
+    <script>
+        mocha.setup('bdd');
+    </script>
+    <script type="text/javascript" src="../../../node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="../../../node_modules/angular-ui-router/build/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="../../../node_modules/angular-ui-bootstrap/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../node_modules/angular-ui-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="../../../bower_components/d3/d3.js"></script>
+    <script src="../../../bower_components/nvd3/build/nv.d3.js"></script> <!-- or use another assembly -->
+    <script src="../../../bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+    <script src="../../../node_modules/angular-mocks/angular-mocks.js"></script>
+    <script src="../../../node_modules//chai/chai.js"></script>
+    <script src="../../../node_modules//sinon-chai/lib/sinon-chai.js"></script>
+    <script type="text/javascript" src="../../../app/build/release.js"></script>
+    <!-- include source files here... -->
+    <script src="../../../tests/unitTest/build/release.spec.js"></script>
+    <script>
+        mocha.run();
+    </script>
+</body>
+</html>

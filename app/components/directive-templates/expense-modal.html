@@ -1,0 +1,37 @@
+<div class="modal-header">
+	<h3 class="modal-title">Expense Form</h3>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<form role="form" novalidate name="expenseForm">
+				<legend>Add your expense !</legend>
+				<fieldset>
+					<div class="form-group">
+						<label>Category</label>
+						<select ng-model="modal.ExpenseData.Category" ng-options="cat as cat.Title for cat in modal.Categories" class="form-control"></select>
+					</div>
+					<div class="form-group">
+						<label>Amount</label>
+						<input type="number" ng-model="modal.ExpenseData.Amount" class="form-control" />
+					</div>
+					<div class="form-group">
+						<label>Description</label>
+						<input type="text" ng-model="modal.ExpenseData.Description" class="form-control" />
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button" ng-click="modal.onSubmit()">Save</button>
+	<button class="btn btn-danger" type="button" ng-click="modal.onClose()">Cancel</button>
+</div>
+
+<script type="text/ng-template" id="customTemplate.html">
+	<a>
+		<img ng-src="http://upload.wikimedia.org/wikipedia/commons/thumb/{{match.model.flag}}" width="16">
+		<span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+	</a>
+</script>

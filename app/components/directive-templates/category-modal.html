@@ -1,0 +1,22 @@
+<div class="modal-header">
+	<h3 class="modal-title">Category Form</h3>
+</div>
+<div class="modal-body">
+	<div class="row">
+		<div class="col-md-12">
+			<form role="form" novalidate name="expenseForm">
+				<legend>Add category !</legend>
+				<fieldset>
+					<div class="form-group">
+						<label>Category</label>
+						<input type="text" ng-model="modal.ExpenseData.Title" class="form-control" />
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="modal-footer">
+	<button class="btn btn-primary" type="button" ng-click="modal.onSubmit()">Save</button>
+	<button class="btn btn-danger" type="button" ng-click="modal.onClose()">Cancel</button>
+</div>
