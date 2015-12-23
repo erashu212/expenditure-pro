@@ -20,9 +20,26 @@ describe('CategorySvc', function () {
     it('should be available and should have been injected by our ExpenseManager app', function () {
         expect(_categorySvc).to.exist;
     });
-    it('get all categories: should be having length greater than zero.', function () {
-        expect(_categorySvc.getAll()).to.not.be.undefined;
-        expect(_categorySvc.getAll()).to.have.length.above(0);
+    it('get all categories: should be having empty array.', function () {
+        _storageSvc.removeAll();
+        expect(_categorySvc.getAll()).to.have.length(0);
+    });
+    it('adding category for first time', function () {
+        var isSet = _categorySvc.add('Rent');
+        expect(isSet).to.be.true;
+    });
+    it('Add Category: if category is unique', function () {
+        var isUnique = _categorySvc.isUnique('Rent');
+        if (isUnique) {
+            var isAdded = _categorySvc.add('Rent');
+        }
+        expect(isUnique).to.not.be.true;
+        expect(isAdded).to.not.be.true;
+    });
+    it('Get All Category', function () {
+        var categories = _categorySvc.getAll();
+        expect(categories).to.have.length.above(0);
+        expect(categories).to.have.length.within(0, 1);
     });
 });
 

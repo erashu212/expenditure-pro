@@ -71,6 +71,10 @@ var ExpenseManager;
                 this.$$window.localStorage.removeItem(key);
                 return true;
             };
+            LocalStorage.prototype.removeAll = function () {
+                this.$$window.localStorage.clear();
+                return true;
+            };
             return LocalStorage;
         })();
         Service.LocalStorage = LocalStorage;

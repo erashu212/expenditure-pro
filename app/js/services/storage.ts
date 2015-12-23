@@ -26,5 +26,10 @@ module ExpenseManager.Service{
 			this.$$window.localStorage.removeItem(key);
 			return true;
 		}
+
+		public removeAll(): boolean {
+			this.$$window.localStorage.clear();
+			return true;
+		}
 	}
 }
