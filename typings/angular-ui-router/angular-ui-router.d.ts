@@ -14,21 +14,21 @@ declare module 'angular-ui-router' {
     // As such, I don't think anybody will ever use the actual
     // default value of the module.  So I've only included the
     // the types. (@xogeny)
-    export type IState = angular.ui.IState;
-    export type IStateProvider = angular.ui.IStateProvider;
-    export type IUrlMatcher = angular.ui.IUrlMatcher;
-    export type IUrlRouterProvider = angular.ui.IUrlRouterProvider;
-    export type IStateOptions = angular.ui.IStateOptions;
-    export type IHrefOptions = angular.ui.IHrefOptions;
-    export type IStateService = angular.ui.IStateService;
-    export type IResolvedState = angular.ui.IResolvedState;
-    export type IStateParamsService = angular.ui.IStateParamsService;
-    export type IUrlRouterService = angular.ui.IUrlRouterService;
-    export type IUiViewScrollProvider = angular.ui.IUiViewScrollProvider;
-    export type IType = angular.ui.IType;
+    export type IState = angular.bootstrap.IState;
+    export type IStateProvider = angular.bootstrap.IStateProvider;
+    export type IUrlMatcher = angular.bootstrap.IUrlMatcher;
+    export type IUrlRouterProvider = angular.bootstrap.IUrlRouterProvider;
+    export type IStateOptions = angular.bootstrap.IStateOptions;
+    export type IHrefOptions = angular.bootstrap.IHrefOptions;
+    export type IStateService = angular.bootstrap.IStateService;
+    export type IResolvedState = angular.bootstrap.IResolvedState;
+    export type IStateParamsService = angular.bootstrap.IStateParamsService;
+    export type IUrlRouterService = angular.bootstrap.IUrlRouterService;
+    export type IUiViewScrollProvider = angular.bootstrap.IUiViewScrollProvider;
+    export type IType = angular.bootstrap.IType;
 }
 
-declare module angular.ui {
+declare module angular.bootstrap {
 
     interface IState {
         name?: string;

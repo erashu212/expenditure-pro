@@ -89,4 +89,4 @@ gulp.task('serve', ['clean','test-compile-ts'], function() {
   });
 });
 
-gulp.task('default', ['clean', 'test-compile-ts']);
+gulp.task('default', ['clean', 'compile-ts']);

@@ -1,7 +1,7 @@
 module ExpenseManager{
 	export class Config{
 		static $inject = ['$stateProvider', '$urlRouterProvider'];
-		constructor($stateProvider: ng.ui.IStateProvider, $urlRouteProvider: ng.ui.IUrlRouterProvider){
+		constructor($stateProvider: ng.bootstrap.IStateProvider, $urlRouteProvider: ng.bootstrap.IUrlRouterProvider){
 			$stateProvider.
 			state('Home', {
 				url: '/dashboard',
